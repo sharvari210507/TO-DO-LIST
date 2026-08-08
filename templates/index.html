@@ -28,9 +28,9 @@
 <div class="container my-3">
     <div class="container2 my-3 rounded p-3">
 
-        {%if alltodos|length == 0 %}
+        {% if alltodos|length == 0 %}
         <div class="alert alert-info" role="alert">
-            No tasks to show. Please add a task.
+            No tasks to show. Please add a task!
         </div>
 
         {% else %}
@@ -46,6 +46,7 @@
                 </tr>
             </thead>
             <tbody>
+
                 {% for todo in alltodos %}
                 <tr>
                     <th scope="row">{{loop.index}}</th>
