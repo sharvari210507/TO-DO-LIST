@@ -12,8 +12,8 @@ def home():
 
     if request.method =='POST':
 
-    title=request.form["title"]
-    desc=request.form['desc']
+     title=request.form["title"]
+     desc=request.form['desc']
 
     todo={
         "sno":next_id,
@@ -25,7 +25,7 @@ def home():
     todos.append(todo)
     next_id+=1
 
-   return render_template("index.html",allTodo=todos)
+    return render_template("index.html",allTodo=todos)
 
 @app.route('/update/<int:sno>',methods=['GET','POST'])
 def update(sno):
@@ -33,7 +33,7 @@ def update(sno):
     for task in todos:
         if task["sno"]==sno:
             todo=task
-           break
+            break
 
         if todo is None:
             return "Task Not Found"
@@ -44,7 +44,7 @@ def update(sno):
             return redirect("/")
         return render_template("update.html",todo=todo) 
 
- @app.route('/delete/<int:sno>') 
+@app.route('/delete/<int:sno>') 
 def delete(sno):
     for task in todos:
         if task["sno"]==sno:
