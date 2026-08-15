@@ -3,8 +3,8 @@
 {% block body %}
 
 <div class="container my-3">
-    <div class="container2 my-3 rounded p-3">
-        <h1>Update Task</h1>
+    <div class="container2 my-3 rounded p-3 border">
+        <h2>Update Task</h2>
 
 
         <form action="/update/{{todo.sno}}" method="POST">
@@ -15,14 +15,13 @@
             </div>
             <div class="mb-3">
                 <label for="desc" class="form-label">Task Description</label>
-                <input type="text" class="form-control" id="desc" name="desc">
+                <input type="text" class="form-control" id="desc" name="desc" placeholder="Write a task description">
 
             </div>
 
-            <button type="submit" class="btn btn-dark">Update Task</button>
+            <button type="submit" class="btn btn-success">Update Task</button>
         </form>
-
     </div>
 </div>
-
+          <script src="https://cdn.jsdelivr.net/npm/bootstrp@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>"
 {%endblock body%}

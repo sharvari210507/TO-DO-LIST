@@ -6,16 +6,17 @@ h1.navbar-title{
     color:blueviolet;
 }
 body{
-    background-color: #E5E5F7;
+    background-color: #f5f4ef;
     opacity: 0.8;
     background-size: 15px 20px;
     background: repeating-linear-gradient(135deg, #E5E5F7 0px, #E5E5F7 20px, #444CF7 20px, #444CF7 22px, #E5E5F7 22px, #E5E5F7 42px, #ad4162 42px, #22D1EE 44px);
+    font-family:'Trebuchet MS','Lucida Sans Unicode','Lucida Grande','Lucida Sans',Arial, Helvetica, sans-serif;
 }
 
 .container2{
     background-color: rgb(135, 192, 127);
     border-radius: 20px;
-    color: #E5E5F7;
+    color: #ad0909;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif';      
 }
  @media (max-width: 768px){
