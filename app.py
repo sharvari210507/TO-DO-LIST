@@ -12,18 +12,18 @@ def home():
 
     if request.method =='POST':
 
-     title=request.form["title"]
-     desc=request.form['desc']
+        title=request.form["title"]
+        desc=request.form['desc']
 
-    todo={
-        "sno":next_id,
-        "title":title,
-        "desc":desc,
-        "date_created":datetime.now(),
-        "status":"Pending"
+        todo={
+           "sno":next_id,
+           "title":title,
+           "desc":desc,
+           "date_created":datetime.now(),
+           "status":"Pending"
     }
-    todos.append(todo)
-    next_id+=1
+        todos.append(todo)
+        next_id+=1
 
     return render_template("index.html",allTodo=todos)
 
@@ -42,6 +42,7 @@ def update(sno):
             todo["title"]=request.form["title"]
             todo["desc"]=request.form["desc"]
             return redirect("/")
+        
         return render_template("update.html",todo=todo) 
 
 @app.route('/delete/<int:sno>') 
